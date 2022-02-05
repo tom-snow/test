@@ -1,7 +1,9 @@
+name: test
+# on: [push, release,workflow_dispatch]
 on:
-  push
-  release
-  workflow_dispatch
+  push:
+  release:
+  workflow_dispatch:
 
 jobs:
   one:
