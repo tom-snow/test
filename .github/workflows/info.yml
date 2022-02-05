@@ -1,9 +1,10 @@
 name: test
 # on: [push, release,workflow_dispatch]
 on:
-  push:
+#   push:
   release:
-  workflow_dispatch:
+    types: [published]
+#   workflow_dispatch:
 
 jobs:
   one:
