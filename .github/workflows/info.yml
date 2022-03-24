@@ -53,8 +53,8 @@ jobs:
         with:
           # list of Docker images to use as base name for tags
           images: |
-            endokai/wechatpchook
-            ghcr.io/endokai/docker-wechatPc
+            tom-snow/test
+            ghcr.io/tom-snow/test
           # generate Docker tags based on the following events/attributes
           tags: |
             type=schedule
