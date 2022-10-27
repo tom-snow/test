@@ -50,7 +50,7 @@ jobs:
           echo "manually run"
 
       - name: Test Something (auto)
-        if: ! ${{github.event.inputs}}
+        if: github.event.inputs == 0
         run: |
           echo "auto run"
         
