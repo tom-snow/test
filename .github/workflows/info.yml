@@ -45,7 +45,7 @@ jobs:
         run: echo "$MATRIX_CONTEXT"
         
       - name: Test Something
-        if: contains(github.event, 'inputs')
+        if: github.event.inputs
         run: |
           echo `manually run`
         
