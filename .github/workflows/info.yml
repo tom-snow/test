@@ -44,8 +44,13 @@ jobs:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: echo "$MATRIX_CONTEXT"
         
-      - name: Test Something
+      - name: Test Something (manually)
         if: github.event.inputs
         run: |
           echo "manually run"
+
+      - name: Test Something (auto)
+        if: ! (github.event.inputs)
+        run: |
+          echo "auto run"
         
