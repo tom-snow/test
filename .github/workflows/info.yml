@@ -5,6 +5,10 @@ on:
   release:
     types: [published]
   workflow_dispatch:
+    inputs:
+      args:
+        description: "test"
+        default: "test arg"
   push:
     branches:
       - 'master'
