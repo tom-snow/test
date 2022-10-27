@@ -46,7 +46,7 @@ jobs:
         
       - name: Test Something
         run: |
-          echo `contains(github.event, 'inputs')`
+          echo `contains(${github.event}, 'inputs')`
           if [contains(github.event, 'inputs')]; then
             echo "manually run"
           fi
