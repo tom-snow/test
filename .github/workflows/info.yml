@@ -49,12 +49,12 @@ jobs:
       - name: Test Something (manually)
         if: github.event.inputs
         run: |
-          ${{env.TESTENV}}="manually run"
+          env.TESTENV="manually run"
 
       - name: Test Something (auto)
         if: github.event.inputs == 0
         run: |
-          TESTENV="auto run"
+          env.TESTENV="auto run"
 
       - name: Test Something
         run: |
