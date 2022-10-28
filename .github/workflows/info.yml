@@ -18,6 +18,8 @@ on:
 jobs:
   one:
     runs-on: ubuntu-latest
+    env:
+      TESTENV: Hello
     steps:
       - name: Dump GitHub context
         env:
@@ -47,10 +49,15 @@ jobs:
       - name: Test Something (manually)
         if: github.event.inputs
         run: |
-          echo "manually run"
+          ${{env.TESTENV}}="manually run"
 
       - name: Test Something (auto)
         if: github.event.inputs == 0
         run: |
-          echo "auto run"
+          TESTENV="auto run"
+
+      - name: Test Something
+        run: |
+          echo ${{env.TESTENV}}
+          echo $TESTENV
         
