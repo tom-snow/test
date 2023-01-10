@@ -1,7 +1,6 @@
 name: test
 # on: [push, release,workflow_dispatch]
 on:
-#   push:
   release:
     types: [published]
   workflow_dispatch:
@@ -9,11 +8,11 @@ on:
       args:
         description: "test"
         default: "test arg"
-  push:
-    branches:
-      - 'master'
-    tags:
-      - 'v*.*.*'
+#  push:
+#    branches:
+#      - 'master'
+#    tags:
+#      - 'v*.*.*'
 
 jobs:
   one:
@@ -49,12 +48,12 @@ jobs:
       - name: Test Something (manually)
         if: github.event.inputs
         run: |
-          env.TESTENV="manually run"
+          echo "manually run"
 
       - name: Test Something (auto)
         if: github.event.inputs == 0
         run: |
-          env.TESTENV="auto run"
+          echo "auto run"
 
       - name: Test Something
         run: |
