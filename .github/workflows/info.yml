@@ -30,7 +30,7 @@ jobs:
           echo "$GITHUB_CONTEXT"
       - name: Dump GitHub Repo
         run: |
-          echo "${{ github.repository.html_url }}"
+          echo "${{ github }}"
       - name: Dump job context
         env:
           JOB_CONTEXT: ${{ toJson(job) }}
