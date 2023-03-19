@@ -7,16 +7,13 @@ on:
     branches:
       - master
       - dev
+    tags:
+      - v*
   workflow_dispatch:
     inputs:
       args:
         description: "test"
         default: "test arg"
-#  push:
-#    branches:
-#      - 'master'
-#    tags:
-#      - 'v*.*.*'
 
 jobs:
   one:
