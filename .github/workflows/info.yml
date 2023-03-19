@@ -2,7 +2,7 @@ name: test
 # on: [push, release,workflow_dispatch]
 on:
   release:
-    types: [published]
+    types: [push]
   workflow_dispatch:
     inputs:
       args:
