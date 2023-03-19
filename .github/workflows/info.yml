@@ -29,7 +29,7 @@ jobs:
         run: |
           echo "$GITHUB_CONTEXT"
           echo "$github.repository.html_url"
-          echo "{{ github.repository.html_url }}"
+          echo "{{ VARS.github.repository.html_url }}"
       - name: Dump job context
         env:
           JOB_CONTEXT: ${{ toJson(job) }}
