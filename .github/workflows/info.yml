@@ -28,8 +28,11 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
           echo "$GITHUB_CONTEXT"
-          echo "$github.repository.html_url"
-          echo "{{ VARS.github.repository.html_url }}"
+      - name: Dump GitHub Repo
+        env:
+          GITHUB_REPO: ${{ github.repository.html_url }}
+        run: |
+          echo "$GITHUB_REPO"
       - name: Dump job context
         env:
           JOB_CONTEXT: ${{ toJson(job) }}
